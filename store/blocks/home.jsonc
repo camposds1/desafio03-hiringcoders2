@@ -1,0 +1,134 @@
+{
+  "store.home": { //determina quais blocos filhos serao exibidos na pagina inicial
+    "blocks": [
+      "list-context.image-list#home",
+      "search-result-layout.customQuery#home"
+    ]
+  },
+  "list-context.image-list#home": {
+    "children": ["slider-layout#banner"],
+    "props": {
+      "height": 400,
+      "images": [
+        {
+          "image": "https://maratonavirtual.s3.sa-east-1.amazonaws.com/6iibxhv7jzzdn2749uhoxub2fdjf?response-content-disposition=inline%3B%20filename%3D%22BANNER-WOOD.png%22%3B%20filename%2A%3DUTF-8%27%27BANNER-WOOD.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIRHGNFPZAGTZ7SUA%2F20210819%2Fsa-east-1%2Fs3%2Faws4_request&X-Amz-Date=20210819T034729Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=59765728f55d82112f82d4816d03875fba18e6efda86e09590092618dcb79bb8",
+          "description": "wood-sport-festival"
+        },
+        {
+          "image": "https://maratonavirtual.s3.sa-east-1.amazonaws.com/du3k6akoks0u3xe322aypnaaal8e?response-content-disposition=inline%3B%20filename%3D%22W6S9NXIJ40I86DJI17S40123EYNM3J6CNF24M4Y04GGC9TBSXU.png%22%3B%20filename%2A%3DUTF-8%27%27W6S9NXIJ40I86DJI17S40123EYNM3J6CNF24M4Y04GGC9TBSXU.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIRHGNFPZAGTZ7SUA%2F20210819%2Fsa-east-1%2Fs3%2Faws4_request&X-Amz-Date=20210819T034812Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=59c31138c9cb832706b04aa7f74bf863b07bab91f076562b65be67fab9752ecf",
+          "description": "grandes-guerreiros"
+        }
+      ]
+    }
+  },
+  "slider-layout#banner": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 1,
+        "tablet": 1,
+        "phone": 1
+      },
+      "infinite": true,
+      "fullWidth": false
+    }
+  },
+  "search-result-layout.customQuery#home": {
+    "props": {
+      "querySchema": {
+        "orderByField": "OrderByTopSaleDESC",
+        "skusFilter": "FIRST_AVAILABLE",
+        "simulationBehavior": "skip",
+        "maxItemsPerPage": 8,
+        "blockClass":"sr",
+        "mapField": "ft"
+      }
+    },
+    "blocks": [
+      "search-result-layout.desktop#home",
+      "search-result-layout.mobile#home"
+    ]
+  },
+  "search-result-layout.desktop#home": {
+    "children": [
+      "flex-layout.row#result"
+    ],
+    "props": {
+      "preventRouteChange": true
+    }
+  },
+  "flex-layout.row#result": {
+    "children": [
+      "search-content#home"
+    ]
+  },
+  "search-content#home": { //bloco responsável por trazer o resultado de busca
+    "blocks": [
+      "gallery#home", "not-found"
+    ]
+  },
+  "gallery#home": {
+    "props": {
+      "layouts": [
+        {
+          "name": "grid",
+          "component": "GridSummary",
+          "itemsPerRow": {
+            "(min-width: 1300px)": 2,
+            "desktop": 2, //quantos itens aparecem na página em desktops
+            "tablet": 1, //quantos itens aparecem na página em tablets
+            "phone": 1 //quantos itens aparecem na página em celulares
+          }
+        },
+        {
+          "name": "list",
+          "component": "ListSummary",
+          "itemsPerRow": 1
+        }
+      ],
+    "ListSummary": "product-summary.shelf#home",
+    "GridSummary": "product-summary.shelf#home"
+    }
+  },
+  "product-summary.shelf#home": {
+    "children": [ //itens que irão aparecer no bloco do produto na home
+      "product-summary-name",
+      "product-images#home",
+      "rich-text#home1",
+      "rich-text#home2",
+      "product-summary-price",
+      "add-to-cart-button#home"
+    ]
+  },
+  "product-images#home": {
+    "props": {
+      "showNavigationArrows": true,
+      "showPaginationDots": true
+    }
+  },
+  "rich-text#home1": {
+    "props": {
+      "text": "PRÉ-LANÇAMENTO",
+      "blockClass": "texto-item1"
+    }
+  },
+  "rich-text#home2": {
+    "props": {
+      "text": "VALIDAÇÃO A PARTIR DE 09/10/2021",
+      "blockClass": "texto-item2"
+    }
+  },
+  "add-to-cart-button#home": {
+    "props": {
+      "onClickBehavior": "go-to-product-page",
+      "text": "VER DETALHES"
+    }
+  },
+  "search-result-layout.mobile#home": {
+    "children": [
+      "flex-layout.row#result"
+    ],
+    "props": {
+      "preventRouteChange": true
+    }
+  }
+}

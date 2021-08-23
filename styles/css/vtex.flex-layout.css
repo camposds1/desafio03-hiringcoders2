@@ -1,0 +1,11 @@
+.flexRow {
+    max-width: 100%;
+}
+
+.flexRowContent {
+    background-color:#161616;
+    
+}
+.flexCol {
+    background-color: #161616;
+}

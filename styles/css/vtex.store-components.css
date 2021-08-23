@@ -1,0 +1,34 @@
+.container {
+    padding: 0 100px 0 100px;
+}
+
+.productBrand {
+    color: #f3f3f3;
+}
+
+.sellingPrice {
+    color: #59FF00;
+    font-weight: 600;
+}
+
+.buy-Button {
+    background-color: #59FF00
+}
+
+.buyButtonText {
+    color:#a7a7a7;
+}
+
+.shippingContainer {
+    color: #f3f3f3;
+}
+
+.searchBarContainer {
+    background-color: #161616;
+    margin: 0 200px 0 200px;
+    width: 600px;
+}
+
+.searchIcon {
+    color: #cecece;
+}

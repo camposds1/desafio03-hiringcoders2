@@ -1,0 +1,17 @@
+.sliderLayoutContainer {
+    width: 100%;
+    height: 450px;
+    padding: 0 200px 0 200px;
+}
+
+.imageElement {
+    border-radius: 15px;
+}
+
+.caretIcon {
+    color: #ffffff;
+}
+
+.paginationDotsContainer {
+    margin: 10px;
+}

@@ -1,0 +1,31 @@
+.menuContainer {
+    background-color: #161616;
+    justify-content: center;
+}
+
+.styledLinkContent {
+    color: #f5f5f5;
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+}
+
+.menuItem {
+    width: 160;
+    height: 48;
+    padding: 6px 12px;
+}
+
+.styledLinkContent:hover {
+    color: #59ff00;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.styledLinkContent:active {
+    color: #59ff00;
+    font-weight: 600;
+    text-decoration: underline;
+}

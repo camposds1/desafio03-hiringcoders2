@@ -1,0 +1,31 @@
+.container {
+    background-color: #424242;
+    min-width: 400px;
+    align-items: center;
+}
+
+.brandName {
+    color: #ececec;
+}
+
+.productNameContainer {
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.nameContainer {
+    justify-content: center;
+    padding-bottom: 10px;
+}
+
+.installmentContainer {
+    color: #ececec;
+}
+
+.listPriceContainer {
+    color: #ececec;
+}
+
+.element {
+    width: 399px;
+}

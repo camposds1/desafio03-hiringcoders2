@@ -1,0 +1,22 @@
+.acceptedPaymentMethodContainer {
+    padding-top: 30px;
+    justify-content: center;
+}
+
+.poweredBy {
+    justify-content: center;
+}
+
+.poweredByImage {
+    width: 100px;
+    height: 70px;
+}
+
+.socialNetworksTitle {
+    padding-left: 10px;
+    color: #7e7e7e;
+}
+
+.socialNetworksContainer {
+    padding-left: 10px;
+}
