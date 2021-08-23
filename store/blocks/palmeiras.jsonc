@@ -1,0 +1,106 @@
+{
+    "store.custom#palmeiras": { //determina quais blocos filhos serao exibidos na pagina palmeiras
+      "blocks": [
+        "search-result-layout.customQuery#palmeiras"
+      ]
+    },
+    "search-result-layout.customQuery#palmeiras": {
+      "props": {
+        "querySchema": {
+          "skusFilter": "FIRST_AVAILABLE",
+          "simulationBehavior": "skip",
+          "maxItemsPerPage": 8,
+          "queryField": "palmeiras",
+          "blockClass":"sr",
+          "mapField": "ft"
+        }
+      },
+      "blocks": [
+        "search-result-layout.desktop#palmeiras",
+        "search-result-layout.mobile#palmeiras"
+      ]
+    },
+    "search-result-layout.desktop#palmeiras": {
+      "children": [
+        "flex-layout.row#palmeiras"
+      ],
+      "props": {
+        "preventRouteChange": true
+      }
+    },
+    "flex-layout.row#palmeiras": {
+      "children": [
+        "search-content#palmeiras"
+      ]
+    },
+    "search-content#palmeiras": { //bloco responsável por trazer o resultado de busca sobre palmeiras
+      "blocks": [
+        "gallery#palmeiras", "not-found"
+      ]
+    },
+    "gallery#palmeiras": {
+      "props": {
+        "layouts": [
+          {
+            "name": "grid",
+            "component": "GridSummary",
+            "itemsPerRow": {
+              "(min-width: 1300px)": 2,
+              "desktop": 2,
+              "tablet": 2,
+              "phone": 1
+            }
+          },
+          {
+            "name": "list",
+            "component": "ListSummary",
+            "itemsPerRow": 1
+          }
+        ],
+      "ListSummary": "product-summary.shelf#palmeiras",
+      "GridSummary": "product-summary.shelf#palmeiras"
+      }
+    },
+    "product-summary.shelf#palmeiras": {
+      "children": [ //itens que irão aparecer no bloco do produto na página palmeiras
+        "product-summary-name",
+        "product-images#palmeiras",
+        "rich-text#palmeiras1",
+        "rich-text#palmeiras2",
+        "product-summary-price",
+        "add-to-cart-button#palmeiras"
+      ]
+    },
+    "product-images#palmeiras": {
+      "props": {
+        "showNavigationArrows": true,
+        "showPaginationDots": true
+      }
+    },
+    "rich-text#palmeiras1": {
+      "props": {
+        "text": "PRÉ-LANÇAMENTO",
+        "blockClass": "texto-item1"
+      }
+    },
+    "rich-text#palmeiras2": {
+      "props": {
+        "text": "VALIDAÇÃO A PARTIR DE 09/10/2021",
+        "blockClass": "texto-item2"
+      }
+    },
+    "add-to-cart-button#palmeiras": {
+      "props": {
+        "onClickBehavior": "go-to-product-page",
+        "text": "VER DETALHES"
+      }
+    },
+    "search-result-layout.mobile#palmeiras": {
+      "children": [
+        "flex-layout.row#palmeiras"
+      ],
+      "props": {
+        "preventRouteChange": true
+      }
+    }
+  }

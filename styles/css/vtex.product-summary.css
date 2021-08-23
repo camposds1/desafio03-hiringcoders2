@@ -2,6 +2,7 @@
     background-color: #424242;
     min-width: 400px;
     align-items: center;
+    justify-content: center;
 }
 
 .brandName {
@@ -28,4 +29,13 @@
 
 .element {
     width: 399px;
+}
+
+.productBrand {
+    color: #cecece;
+}
+
+.buyButtonContainer{
+    justify-content: center;
+    align-items: center;
 }

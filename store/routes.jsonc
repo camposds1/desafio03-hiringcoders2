@@ -4,5 +4,8 @@
   },
   "store.custom#corinthians": {
     "path": "/corinthians"
+  },
+  "store.custom#palmeiras": {
+    "path": "/palmeiras"
   }
 }
